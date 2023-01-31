@@ -12,6 +12,7 @@ services:
         build: ./spring2
         networks:
           - app-network
+	restart: always
         ports:
           - 8080:8080
         depends_on:
@@ -24,7 +25,6 @@ services:
         networks:
           - app-network
         depends_on:
-          - database
           - backend
 
 networks:
