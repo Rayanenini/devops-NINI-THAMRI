@@ -43,7 +43,7 @@ jobs:
           # relative path to the place where source code with Dockerfile is located
           context: ./spring2
           # Note: tags has to be all lower-case
-          tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops:spring2
+          tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-devops:spring
           push: ${{ github.ref == 'refs/heads/master' }}
       - name: Build image and push database
           # DO the same for database
