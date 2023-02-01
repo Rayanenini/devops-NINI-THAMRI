@@ -5,14 +5,18 @@ services:
         build: ./postgresql
         ports:
           - 5432:5432
+        environment:
+          POSTGRES_DB: db
+          POSTGRES_USER: usr
+          POSTGRES_PASSWORD: pwd
         networks:
           - app-network
         
     backend:
         build: ./spring2
+        restart: always
         networks:
           - app-network
-	restart: always
         ports:
           - 8080:8080
         depends_on:
