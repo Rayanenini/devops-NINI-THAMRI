@@ -14,7 +14,11 @@ jobs:
 
      #do the same with another action (actions/setup-java@v3) that enable to setup jdk 17
       - name: Set up JDK 17
-        #TODO
+      - uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: "adopt"
+          #TODO
 
      #finally build your app with the latest command
       - name: Build and test with Maven
