@@ -1,0 +1,10 @@
+---
+# tasks file for roles/launch-proxy
+- name: Run HTTPD
+  docker_container:
+    name: http
+    image: faycalth/tp-devops:http
+    ports:
+      - 80:80
+    networks:
+      - name: app-network

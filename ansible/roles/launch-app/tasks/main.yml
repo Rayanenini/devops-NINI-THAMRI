@@ -1,0 +1,10 @@
+---
+# tasks file for roles/launch-app
+- name: Run Backend
+  docker_container:
+    name: backend
+    image: faycalth/tp-devops:spring
+    ports:
+      - 8080:8080
+    networks:
+      - name: app-network
