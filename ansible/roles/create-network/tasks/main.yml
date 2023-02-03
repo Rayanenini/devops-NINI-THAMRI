@@ -1,5 +1,0 @@
----
-# tasks file for roles/create-network
-- name: Create Network
-  docker_network:
-    name: app-network
