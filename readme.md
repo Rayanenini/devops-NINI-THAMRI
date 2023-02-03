@@ -20,3 +20,11 @@ docker build -t fayc69/sprint-tp1 .
 docker run --name spring-tp1 fayc69/spring-tp1
 
 ## HTTP
+
+
+
+TP3 : ERREURS 
+networks:
+    - name : (oublie du name)
+dans backend restart : always pas bon
+ 

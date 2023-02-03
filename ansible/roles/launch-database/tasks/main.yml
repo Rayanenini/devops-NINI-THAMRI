@@ -1,0 +1,9 @@
+# tasks file for roles/launch-database
+- name: Run database
+  docker_container:
+    name: database
+    image: faycalth/tp-devops:postgresql
+    ports:
+      - 5432:5432
+    networks:
+      - name: app-network
